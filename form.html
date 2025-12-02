@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Записаться на татуировку</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="icon" href="images/logo.png" rel="icon" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav_items">
+        <a href="./index.html"
+          ><img src="./images/logo.png" class="logo-img"
+        /></a>
+        <a href="./works.html">работы</a>
+        <a href="https://vk.com/tattoo.spayka49" target="_blank">адрес</a>
+        <a href="./index.html#sale">акции</a>
+        <a href="./form.html" class="current">записаться</a>
+        <a href="./studio.html">мастера</a>
+      </div>
+    </nav>
+
+    <section class="form" id="up">
+      <form
+        class="myform"
+        action="https://postman-echo.com/get"
+        method="get"
+        target="_blank"
+      >
+        <div class="form-wrapper">
+          <label for="surname">Фамилия</label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            placeholder="Введите фамилию"
+            required
+          />
+        </div>
+
+        <div class="form-wrapper">
+          <label for="name">Имя</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Введите имя"
+            required
+          />
+        </div>
+
+        <div class="form-wrapper">
+          <label for="birth">Дата рождения</label>
+          <input type="date" id="birth" name="birth" required class="gray" />
+        </div>
+
+        <div class="form-wrapper">
+          <label for="group">Номер группы</label>
+          <input
+            type="number"
+            id="group"
+            name="group"
+            placeholder="укажите номер группы"
+          />
+        </div>
+
+        <div class="form-wrapper">
+          <label for="email">Электронная почта</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+          />
+        </div>
+
+        <div class="form-wrapper">
+          <label for="phone">Номер телефона</label>
+          <input
+            type="tel"
+            id="phone"
+            name="mobile_phone"
+            pattern="[\+]\d{1}\d{3}\d{3}\d{4}"
+            placeholder="+7(000)000-00-00"
+            required=""
+          />
+        </div>
+
+        <div class="form-wrapper">
+          <label for="date">Желаемая дата сеанса</label>
+          <input type="date" id="date" name="date" required class="gray" />
+        </div>
+
+        <div class="form-wrapper">
+          <label for="time-selection">Время сеанса</label>
+          <select id="time-selection" name="time-selection">
+            <option value="">Укажите желаемое время</option>
+            <option value="morning">9:00</option>
+            <option value="day">12:00</option>
+            <option value="evening">17:00</option>
+            <option value="night">21:00</option>
+          </select>
+        </div>
+
+        <div class="form-wrapper">
+          <label for="master-selection">Предпочитаемый мастер</label>
+          <select id="master-selection" name="master-selection">
+            <option value="">Выберите мастера</option>
+            <option value="alexander">александр</option>
+            <option value="pavel">павел</option>
+            <option value="alisa">алиса</option>
+            <option value="sergei">сергей</option>
+            <option value="dmitry">дмитрий</option>
+            <option value="egor">егор</option>
+          </select>
+        </div>
+
+        <script>
+          (function () {
+            var params = new URLSearchParams(window.location.search);
+            var masterFromUrl = params.get("master");
+
+            if (!masterFromUrl) {
+              return;
+            }
+
+            var select = document.getElementById("master-selection");
+            if (!select) {
+              return;
+            }
+            select.value = masterFromUrl;
+          })();
+        </script>
+
+        <div class="form-wrapper">
+          <label for="password">Введите код из СМС</label>
+          <input type="password" id="password" name="password" />
+        </div>
+
+        <div class="form-wrapper">
+          <div>
+            <input type="radio" id="personal" name="personal" value="yes" />
+            <label for="personal"> Требуется обратный звонок </label>
+          </div>
+          <div>
+            <input type="radio" id="personal" name="personal" value="yes" />
+            <label for="personal"> Записаться без звонка </label>
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <div>
+            <input type="checkbox" id="personal" name="personal" value="yes" />
+            <label for="personal">
+              Даю согласие на обработку персональных данных
+            </label>
+          </div>
+        </div>
+
+        <input type="hidden" id="personal" name="personal" />
+
+        <button class="form-btn" type="submit">отправить</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <a href="#up" class="footer-logo">
+          <img src="./images/arrow.png" alt="logo" class="footer-logo-img" />
+        </a>
+        <a href="./passport.html" class="footer-txt"> паспорт </a>
+        <a href="./zadachka.html" class="footer-link"> задача </a>
+      </div>
+    </footer>
+  </body>
+</html>
