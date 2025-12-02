@@ -1,0 +1,13 @@
+    @font-face {
+        font-family: 'OMG';
+        src: url('../fonts/OMGSANS.otf') format('OpenType');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Coolvetica';
+        src: url('../fonts/coolvetica-cond.otf') format('OpenType');
+        font-weight: normal;
+        font-style: normal;
+    }

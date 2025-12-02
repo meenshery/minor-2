@@ -1,0 +1,726 @@
+/* html */
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #2f00ff;
+}
+
+body {
+  height: 100%;
+  display: block;
+  font-family: "OMG";
+  background-color: #eeeeee;
+}
+
+p {
+  font-family: "Coolvetica";
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  font-family: "OMG";
+  color: black;
+}
+
+button {
+  width: 15.625vw;
+  height: 4.1667vw;
+  font-family: "OMG";
+  font-size: 3.3333vw;
+  color: white;
+  background: #000;
+}
+
+button:hover {
+  color: #ffffff;
+  background: #2f00ff;
+}
+
+/* header */
+
+nav {
+  width: 85vw;
+  height: 5vw;
+  top: 0;
+  left: 50vw;
+  transform: translateX(-50%);
+  position: fixed;
+  border-radius: 0px 0px 10px 10px;
+  opacity: 0.9;
+  background: #dadada;
+  z-index: 1000;
+}
+
+.logo-img {
+  width: 3vw;
+  margin-left: 8vw;
+  margin-right: 15vw;
+  filter: grayscale(0);
+}
+
+.logo-img:hover {
+  filter: grayscale(1);
+  transition: filter 0.3s ease;
+}
+
+.nav_items {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.nav_items > a:not(:first-child) {
+  margin-right: 3vw;
+}
+
+.nav_items > a {
+  font-size: 3.33vw;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav_items > a:hover {
+  color: #2f00ff;
+  transition: all 0.2s ease-in-out;
+}
+
+.current {
+  background-color: #2f00ff;
+  color: #ffffff !important;
+}
+
+/* main, banner */
+
+.banner {
+  width: 100vw;
+  height: 56.25vw;
+  position: relative;
+  overflow: hidden;
+  margin-top: -5vw;
+  background-image: url(../images/background-1.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.banner-header {
+  font-size: 16vw;
+  position: absolute;
+  top: 20vw;
+  left: 50vw;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.banner-text {
+  font-size: 3vw;
+  position: absolute;
+  top: 50vw;
+  left: 50vw;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+/* about */
+
+.about {
+  width: 100vw;
+  height: 50vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-header {
+  font-size: 3vw;
+  position: absolute;
+  top: 10vw;
+  left: 17vw;
+  z-index: 3;
+}
+
+.abt-list {
+  font-family: "Coolvetica";
+  position: absolute;
+  font-size: 3vw;
+  top: 15vw;
+  left: 18vw;
+  list-style-type: decimal;
+}
+
+.abt-list-2 {
+  list-style-type: square;
+  margin-left: 4vw;
+}
+
+.about-image {
+  position: absolute;
+  top: 15vw;
+  right: 17vw;
+  width: 35vw;
+}
+
+.image-1 {
+  width: 100vw;
+  position: absolute;
+  animation: img1 2s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+
+@keyframes img1 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  75% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* акции */
+
+.sales {
+  width: 100vw;
+  height: 70vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.sales-header {
+  font-size: 3vw;
+  position: absolute;
+  top: 30vw;
+  left: 17vw;
+  z-index: 3;
+}
+
+.table {
+  width: 50vw;
+  top: 40vw;
+  left: 17vw;
+  position: absolute;
+  border: 15px solid #2f00ff;
+  border-collapse: collapse;
+  background-image: url(../images/sales.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.table th {
+  font-size: 3vw;
+  padding: 5px;
+  background: #dadada;
+  border: 5px solid #2f00ff;
+}
+.table td {
+  font-family: "Coolvetica";
+  font-size: 3vw;
+  padding: 5px;
+  border: 5px solid #2f00ff;
+}
+
+/* футер */
+
+.footer {
+  height: 5.42vw;
+  width: 100vw;
+  opacity: 0.9;
+  background: #dadada;
+  z-index: 10;
+}
+
+.footer-container {
+  display: flex;
+  height: 100%;
+}
+
+.footer-logo-img {
+  height: 3.18vw;
+  position: absolute;
+  bottom: 1.15vw;
+  left: 8.44vw;
+}
+
+.footer-txt {
+  position: absolute;
+  bottom: 0.73vw;
+  left: 17vw;
+  font-size: 3.33vw;
+  font-family: "OMG";
+  color: #000000;
+}
+
+.footer-txt:hover {
+  color: #2f00ff;
+  cursor: pointer;
+}
+
+.footer-link {
+  position: absolute;
+  bottom: 0.73vw;
+  right: 8.44vw;
+  font-family: "OMG";
+  font-size: 3.33vw;
+  color: #000000;
+}
+
+.footer-link:hover {
+  color: #2f00ff;
+  cursor: pointer;
+}
+
+/* работы */
+
+.works-list {
+  width: 100vw;
+  height: 49vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.real-works {
+  position: absolute;
+  top: 20vw;
+  left: 17vw;
+  width: 30vw;
+  height: 10vw;
+  background-image: url(../images/w-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.sketches {
+  position: absolute;
+  top: 20vw;
+  right: 17vw;
+  width: 30vw;
+  height: 10vw;
+  background-image: url(../images/w-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.real-works:hover,
+.sketches:hover {
+  opacity: 0.8;
+}
+
+.w1-txt {
+  font-size: 2vw;
+  position: absolute;
+  top: 4vw;
+  left: 2vw;
+}
+
+.w2-txt {
+  font-size: 2vw;
+  position: absolute;
+  top: 4vw;
+  left: 2vw;
+}
+
+.btn-1 {
+  position: absolute;
+  top: 40vw;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+/* набитые тату */
+
+.ourworks {
+  width: 100vw;
+  height: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.oursketches {
+  width: 100vw;
+  height: 97vw;
+  position: relative;
+  top: 0vw;
+  overflow: hidden;
+}
+
+.works-wrapper {
+  width: 80vw;
+  position: absolute;
+  top: 30vw;
+  left: 17vw;
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+}
+
+.works-wrapper-2 {
+  width: 80vw;
+  position: absolute;
+  top: 60vw;
+  left: 17vw;
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+}
+
+.image-div {
+  width: 20vw;
+}
+
+.im1 {
+  width: 20vw;
+}
+
+.im2 {
+  width: 20vw;
+}
+
+.im3 {
+  width: 20vw;
+}
+
+.im4 {
+  width: 20vw;
+}
+
+.im5 {
+  width: 20vw;
+}
+
+.im6 {
+  width: 20vw;
+}
+
+.btn-2 {
+  position: absolute;
+  top: 92vw;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+.mini-header {
+  font-size: 3vw;
+  position: absolute;
+  bottom: 13vw;
+  left: 17vw;
+  z-index: 3;
+}
+
+.mini-img {
+  position: absolute;
+  width: 5vw;
+  bottom: 12vw;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+/* форма */
+
+.form {
+  width: 100vw;
+  height: 110vw;
+  position: relative;
+  overflow: hidden;
+  font-family: "Coolvetica";
+}
+
+.myform {
+  position: absolute;
+  top: 10vw;
+  left: 50vw;
+  transform: translateX(-50%);
+  font-size: 3vw;
+}
+
+.form-btn {
+  margin-top: 2vw;
+  margin-left: 15vw;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  font-family: "Coolvetica";
+  font-size: 3vw;
+}
+
+option {
+  font-family: "Coolvetica";
+  border-radius: 4px;
+  font-size: 3vw;
+}
+
+.gray {
+  color: #757575;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-top: 1vw;
+  accent-color: #2f00ff;
+  width: 2vw;
+  height: 2vw;
+}
+
+/* паспорт */
+
+.passport {
+  width: 100vw;
+  height: 120vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.psprt-container {
+  position: absolute;
+  width: 40vw;
+  height: 50vw;
+  top: 10vw;
+  left: 50vw;
+  transform: translateX(-50%);
+  background-image: url(../images/passport.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.p-txt {
+  position: absolute;
+  font-family: "OMG";
+  font-size: 1.5vw;
+}
+
+.p-surname {
+  font-size: 3vw;
+  top: 27vw;
+  left: 3vw;
+}
+
+.p-name {
+  font-size: 3vw;
+  top: 27vw;
+  left: 13vw;
+}
+
+.p-place {
+  top: 27.5vw;
+  right: 3vw;
+}
+
+.p-birth {
+  top: 30.5vw;
+  left: 21vw;
+}
+
+.p-sex {
+  top: 33vw;
+  left: 21vw;
+}
+
+.p-date {
+  top: 35.5vw;
+  left: 21vw;
+}
+
+.p-num {
+  top: 38vw;
+  left: 21vw;
+}
+
+.p-city {
+  font-size: 2vw;
+  top: 42.5vw;
+  left: 15.5vw;
+}
+
+.change {
+  height: 9vw;
+  position: absolute;
+  top: 7.5vw;
+  left: 12vw;
+  background-color: darkkhaki;
+}
+
+.change:hover {
+  background-color: #757575;
+}
+
+.dom-header {
+  font-size: 3vw;
+  position: absolute;
+  bottom: 45vw;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+.dom {
+  width: 90vw;
+  height: 41vw;
+  position: absolute;
+  bottom: 2vw;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+/* алгоритмическая задача */
+
+.problem {
+  width: 100vw;
+  height: 51vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.problem-header {
+  font-size: 3vw;
+  position: absolute;
+  top: 10vw;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+.problem-txt {
+  font-family: "Coolvetica";
+  font-size: 2vw;
+  position: absolute;
+  top: 15vw;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+.problem-form {
+  position: absolute;
+  top: 26vw;
+  left: 50vw;
+  transform: translateX(-50%);
+  font-size: 3vw;
+}
+
+.problem-btn {
+  margin-top: 2vw;
+}
+
+.problem-result {
+  font-family: "Coolvetica";
+  font-size: 2vw;
+  position: absolute;
+  top: 40vw;
+  left: 50vw;
+  transform: translateX(-50%);
+  color: #757575;
+}
+
+.shop-section {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.shop-title {
+  position: absolute;
+  top: 12.08vw;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6.67vw;
+}
+
+.shop-list {
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 25vw;
+  padding-bottom: 10vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32.55vw, 1fr));
+  gap: 6vw 6vw;
+}
+
+.shop-card {
+  width: 100%;
+  height: 37.97vw;
+  position: relative;
+}
+
+.shop-card-img {
+  width: 100%;
+  height: 24.95vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.info {
+  width: 100%;
+  height: 13.02vw;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  background: #666;
+}
+
+.shop-button {
+  width: 15.625vw;
+  height: 4.1667vw;
+  font-family: "OMG";
+  font-size: 3.3333vw;
+  color: white;
+  background: #000;
+  position: absolute;
+  bottom: 1.3vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.shop-button:hover {
+  color: #ffffff;
+  background: #2f00ff;
+}
+
+.infotxt {
+  position: absolute;
+  font-family: "Coolvetica";
+  font-size: 2.5vw;
+  color: #fff;
+}
+
+.info-txt-1 {
+  top: 0.52vw;
+  left: 2.66vw;
+}
+
+.info-txt-2 {
+  top: 2.92vw;
+  left: 10.57vw;
+}
+
+.info-txt-3 {
+  top: 0.52vw;
+  left: 16.77vw;
+}
+
+.info-txt-4 {
+  top: 4.17vw;
+  right: 2.6vw;
+}
