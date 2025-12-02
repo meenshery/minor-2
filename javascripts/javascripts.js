@@ -1,5 +1,3 @@
-// ---------- ПАСПОРТ (переключение RU/EN) ----------
-
 document.addEventListener("DOMContentLoaded", function () {
   let toEn = false;
 
@@ -42,8 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// ---------- АЛГОРИТМИЧЕСКАЯ ЗАДАЧА ----------
-
 document.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("num");
   const btn = document.querySelector(".problem-btn");
@@ -66,19 +62,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ---------- НАШИ МАСТЕРА (динамические карточки + запись) ----------
-
 document.addEventListener("DOMContentLoaded", function () {
   const shopList = document.getElementById("shop-list");
 
-  // Если мы не на странице studio.html, просто выходим
   if (!shopList) {
-    // Но всё равно обрабатываем селект мастера, если он есть (form.html)
     initMasterSelectFromQuery();
     return;
   }
 
-  // Массив мастеров — аналог примера с товарами у препода
   const masters = [
     {
       id: "alexander",
@@ -129,8 +120,6 @@ document.addEventListener("DOMContentLoaded", function () {
       img: "./images/m6.jpg",
     },
   ];
-
-  // Генерируем HTML карточек мастеров из массива
   masters.forEach(function (m) {
     const card = document.createElement("div");
     card.classList.add("shop-card");
@@ -148,8 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     shopList.appendChild(card);
   });
-
-  // Делегирование событий: ловим клики по кнопкам "записаться"
   shopList.addEventListener("click", function (event) {
     const btn = event.target.closest(".shop-button");
     if (!btn) return;
@@ -160,12 +147,8 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href =
       "form.html?master=" + encodeURIComponent(masterValue);
   });
-
-  // На всякий случай инициализируем селект по параметру, если такой есть
   initMasterSelectFromQuery();
 });
-
-// ---------- Функция для формы записи (подтянуть мастера из URL) ----------
 
 function initMasterSelectFromQuery() {
   const masterSelect = document.getElementById("master-selection");
