@@ -11,9 +11,9 @@
   <body>
     <nav>
       <div class="nav_items">
-        <a href="./index.html"
-          ><img src="./images/logo.png" class="logo-img"
-        /></a>
+        <a href="./index.html">
+          <img src="./images/logo.png" class="logo-img" />
+        </a>
         <a href="./works.html">работы</a>
         <a href="https://vk.com/tattoo.spayka49" target="_blank">адрес</a>
         <a href="./index.html#sale">акции</a>
@@ -36,6 +36,7 @@
             id="surname"
             name="surname"
             placeholder="Введите фамилию"
+            value="Иванов"
             required
           />
         </div>
@@ -47,13 +48,21 @@
             id="name"
             name="name"
             placeholder="Введите имя"
+            value="Иван"
             required
           />
         </div>
 
         <div class="form-wrapper">
           <label for="birth">Дата рождения</label>
-          <input type="date" id="birth" name="birth" required class="gray" />
+          <input
+            type="date"
+            id="birth"
+            name="birth"
+            required
+            class="gray"
+            value="2004-11-23"
+          />
         </div>
 
         <div class="form-wrapper">
@@ -63,6 +72,7 @@
             id="group"
             name="group"
             placeholder="укажите номер группы"
+            value="1"
           />
         </div>
 
@@ -73,6 +83,7 @@
             id="email"
             name="email"
             placeholder="example@gmail.com"
+            value="example@gmail.com"
           />
         </div>
 
@@ -83,14 +94,22 @@
             id="phone"
             name="mobile_phone"
             pattern="[\+]\d{1}\d{3}\d{3}\d{4}"
-            placeholder="+7(000)000-00-00"
-            required=""
+            placeholder="+79000000000"
+            value="+79000000000"
+            required
           />
         </div>
 
         <div class="form-wrapper">
           <label for="date">Желаемая дата сеанса</label>
-          <input type="date" id="date" name="date" required class="gray" />
+          <input
+            type="date"
+            id="date"
+            name="date"
+            required
+            class="gray"
+            value="2024-12-30"
+          />
         </div>
 
         <div class="form-wrapper">
@@ -99,7 +118,7 @@
             <option value="">Укажите желаемое время</option>
             <option value="morning">9:00</option>
             <option value="day">12:00</option>
-            <option value="evening">17:00</option>
+            <option value="evening" selected>17:00</option>
             <option value="night">21:00</option>
           </select>
         </div>
@@ -108,7 +127,7 @@
           <label for="master-selection">Предпочитаемый мастер</label>
           <select id="master-selection" name="master-selection">
             <option value="">Выберите мастера</option>
-            <option value="alexander">александр</option>
+            <option value="alexander" selected>александр</option>
             <option value="pavel">павел</option>
             <option value="alisa">алиса</option>
             <option value="sergei">сергей</option>
@@ -116,7 +135,6 @@
             <option value="egor">егор</option>
           </select>
         </div>
-
         <script>
           (function () {
             var params = new URLSearchParams(window.location.search);
@@ -136,30 +154,51 @@
 
         <div class="form-wrapper">
           <label for="password">Введите код из СМС</label>
-          <input type="password" id="password" name="password" />
+          <input type="password" id="password" name="password" value="1234" />
         </div>
 
         <div class="form-wrapper">
           <div>
-            <input type="radio" id="personal" name="personal" value="yes" />
-            <label for="personal"> Требуется обратный звонок </label>
+            <input
+              type="radio"
+              id="personal-callback"
+              name="personal_call"
+              value="callback"
+              checked
+            />
+            <label for="personal-callback"> Требуется обратный звонок </label>
           </div>
           <div>
-            <input type="radio" id="personal" name="personal" value="yes" />
-            <label for="personal"> Записаться без звонка </label>
+            <input
+              type="radio"
+              id="personal-no-call"
+              name="personal_call"
+              value="no_call"
+            />
+            <label for="personal-no-call"> Записаться без звонка </label>
           </div>
         </div>
 
         <div class="form-wrapper">
           <div>
-            <input type="checkbox" id="personal" name="personal" value="yes" />
-            <label for="personal">
+            <input
+              type="checkbox"
+              id="personal-agree"
+              name="personal_agree"
+              value="yes"
+              checked
+            />
+            <label for="personal-agree">
               Даю согласие на обработку персональных данных
             </label>
           </div>
         </div>
-
-        <input type="hidden" id="personal" name="personal" />
+        <input
+          type="hidden"
+          id="personal-hidden"
+          name="personal_hidden"
+          value="default"
+        />
 
         <button class="form-btn" type="submit">отправить</button>
       </form>
